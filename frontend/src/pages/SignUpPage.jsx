@@ -1,4 +1,11 @@
+import { useState } from "react";
+import Input from "../components/Input.jsx";
+import { User } from "lucide-react";
+import { motion } from "framer-motion";
+
 const SignUpPage = () => {
+  const [name, setName] = useState("");
+
   const handleSignup = (e) => {
     e.preventDefault();
   };
@@ -15,7 +22,15 @@ const SignUpPage = () => {
           Create Account
         </h2>
 
-        <form onSubmit={handleSignup}></form>
+        <form onSubmit={handleSignup}>
+          <Input
+            icon={User}
+            type="text"
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </form>
       </div>
     </motion.div>
   );

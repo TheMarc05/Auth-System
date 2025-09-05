@@ -25,7 +25,7 @@ export default defineConfig([
     rules: {
       "react/jsx-uses-react": "off",
       "react/prop-types": "off",
-      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
+      "no-unused-vars": ["error", { varsIgnorePattern: false }],
     },
   },
 ]);
